@@ -10,7 +10,7 @@ var RandomPoem;
     // console.log(verb);
     // console.log(object);
     // for-Schleife - Konsolenausgabe der Sätze
-    for (let i = subject.length; i >= 1; i--) {
+    for (let i = subject.length; i >= 2; i--) {
         // console.log(i);
         console.log(getVerse(subject, verb, object));
     }
