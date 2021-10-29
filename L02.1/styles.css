@@ -7,6 +7,9 @@ h1{
 
 span{
     position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
 }
 
 body{
