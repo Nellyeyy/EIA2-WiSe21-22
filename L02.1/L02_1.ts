@@ -1,3 +1,5 @@
+// Zusammenarbeit mit David Katalenic
+
 namespace EventInspector {
 
     // Variablen for function handload
