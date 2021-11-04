@@ -21,3 +21,16 @@ p{
 div{
     background-color: rgb(8, 88, 88);
 }
+
+#tags{
+    color: white;
+    margin-top: 650px;
+    margin-left: -800px;
+}
+
+#gameboard{
+    width: 800px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: -610px;
+}
