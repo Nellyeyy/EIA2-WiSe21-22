@@ -1,0 +1,36 @@
+body{
+    background-color: teal;
+    display: flex;
+}
+
+h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: white;
+}
+
+p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 110px;
+    margin-left: -410px;
+}
+
+div{
+    background-color: rgb(8, 88, 88);
+}
+
+#tags{
+    color: white;
+    margin-top: 650px;
+    margin-left: -800px;
+}
+
+#gameboard{
+    width: 800px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: -610px;
+}
