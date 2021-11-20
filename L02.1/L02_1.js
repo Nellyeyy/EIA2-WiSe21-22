@@ -1,4 +1,5 @@
 "use strict";
+// Zusammenarbeit mit David Katalenic
 var EventInspector;
 (function (EventInspector) {
     // Variablen for function handload
