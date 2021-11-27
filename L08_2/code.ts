@@ -25,11 +25,11 @@ namespace goldenerHerbst {
         mountains({ x: 0, y: 600 }, 50, 320, "grey", "white");
         mountains({ x: 0, y: 600 }, 70, 160, "grey", "white");
 
-        trees({ x: 550, y: 200 }, { x: 200, y: 200 }, "orange");
-        trees({ x: 800, y: 300 }, { x: 400, y: 400 }, "darkred");
+        trees({ x: 550, y: 200 }, { x: 200, y: 200 }, "darkred");
+        trees({ x: 800, y: 300 }, { x: 400, y: 400 }, "orange");
         trees({ x: 1000, y: 150 }, { x: 200, y: 200 }, "darkgreen");
         trees({ x: 300, y: 250 }, { x: 400, y: 400 }, "darkgreen");
-        trees({ x: 1200, y: 250 }, { x: 200, y: 200 }, "orange");
+        trees({ x: 1200, y: 250 }, { x: 200, y: 200 }, "darkred");
 
         squirrel({ x: 50, y: 730 }, { x: 250, y: 250 });
         squirrel({ x: 650, y: 750 }, { x: 250, y: 250 });
@@ -154,7 +154,7 @@ namespace goldenerHerbst {
 
         //Ohren
         crc2.beginPath();
-        crc2.fillStyle = "brown";
+        crc2.fillStyle = "darkred";
         crc2.arc(_position.x + 143, _position.y + -38, 12, 0, 2 * Math.PI);
         
         crc2.closePath();
