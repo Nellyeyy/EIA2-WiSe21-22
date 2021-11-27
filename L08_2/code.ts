@@ -1,4 +1,4 @@
-//Zusammenarbeit mit Eileen Harr
+//Zusammenarbeit mit David Katalenic
 
 
 namespace goldenerHerbst {
