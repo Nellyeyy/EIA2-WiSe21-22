@@ -55,7 +55,7 @@ namespace Herbscht {
         gradient.addColorStop(0, "orange");
 
         crc2.save();
-        crc2.translate(_position.x, _position.y);
+        crc2.translate(10 + _position.x, 150 + _position.y);
 
         crc2.fillStyle = gradient;
 
