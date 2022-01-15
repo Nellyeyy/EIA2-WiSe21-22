@@ -9,6 +9,7 @@ var A03Memory;
     let cardsSpan;
     let bg;
     let inputs;
+    // tslint:disable-next-line: variable-name
     let formData;
     function start() {
         document.getElementById("fsSpecial")?.classList.add("isHidden");

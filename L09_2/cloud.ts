@@ -7,6 +7,7 @@ namespace Herbscht {
 
         constructor(_position: number, _x?: number, _y?: number) {
             super(_position);
+            // tslint:disable-next-line: variable-name
             this.position = new Vector(_x, _y);
             this.velocity = new Vector(10, 10);
             this.velocity.scale(3);

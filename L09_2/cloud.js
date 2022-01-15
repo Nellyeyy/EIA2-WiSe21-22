@@ -6,6 +6,7 @@ var Herbscht;
     class Cloud extends Herbscht.Moveable {
         constructor(_position, _x, _y) {
             super(_position);
+            // tslint:disable-next-line: variable-name
             this.position = new Herbscht.Vector(_x, _y);
             this.velocity = new Herbscht.Vector(10, 10);
             this.velocity.scale(3);

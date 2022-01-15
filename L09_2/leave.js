@@ -47,7 +47,7 @@ var Herbscht;
         particle.arc(0, 0, rParcticles, 0, 0.9 * Math.PI);
         gradient.addColorStop(0, "orange");
         Herbscht.crc2.save();
-        Herbscht.crc2.translate(10 + _position.x, 150 + _position.y);
+        Herbscht.crc2.translate(_position.x, _position.y);
         Herbscht.crc2.fillStyle = gradient;
         for (let drawn = 0; drawn < nParticles; drawn++) {
             Herbscht.crc2.save();

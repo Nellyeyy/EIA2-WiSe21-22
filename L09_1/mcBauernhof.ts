@@ -56,6 +56,7 @@ namespace Aufgabe9_1 {
 
         stockdiv.innerHTML = firstanimal.eat() + secondanimal.eat() + thirdanimal.eat() + forthanimal.eat() + fifthanimal.eat();
         // don´t know why it is marked wrong - it works and we do it like this all the time -help???
+        // tslint:disable-next-line: variable-name
         document.querySelector("button").addEventListener("click", cow);
         setTimeout(cow, 500);
 

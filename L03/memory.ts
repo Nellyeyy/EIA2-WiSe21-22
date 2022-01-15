@@ -8,6 +8,7 @@ namespace A03Memory {
     let cardsSpan: HTMLSpanElement;
     let bg: string;
     let inputs: HTMLInputElement [];
+    // tslint:disable-next-line: variable-name
     let formData: FormData;
 
     function start(): void {
