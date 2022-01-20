@@ -8,8 +8,7 @@ namespace L11_1_GoldenerHerbst {
     let moveables: Moveable[] = [];
     let imgData: ImageData;
 
-    export let nutPos: Vector[] = [];
-
+   
     function handleLoad(_event: Event): void {
 
         canvas = document.querySelector("canvas");
@@ -32,7 +31,7 @@ namespace L11_1_GoldenerHerbst {
 
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
         createClouds();
-        createSquirrel();
+        createHund();
         createLeaf();
         window.setInterval(update, 60);
     }
@@ -138,7 +137,7 @@ namespace L11_1_GoldenerHerbst {
         }
     }
 
-    function createSquirrel(): void {
+    function createHund(): void {
         for (let i: number = 0; i < 1; i++) {
             let squirrel: Squirrel = new Squirrel(0.5, new Vector(0.5, 500));
             moveables.push(squirrel);
@@ -150,16 +149,6 @@ namespace L11_1_GoldenerHerbst {
             let leaf: Leaf = new Leaf(0.5, new Vector(200, 500));
             moveables.push(leaf);
         }
-    }
-
-    function createNut(_event: MouseEvent): void {
-        console.log(_event);
-        // tslint:disable-next-line: typedef
-        let nut = new Nut(new Vector(_event.offsetX, _event.offsetY));
-        moveables.push(nut);
-        let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
-        nutPos.push(placeNut);
-
     }
 
     function update(): void {

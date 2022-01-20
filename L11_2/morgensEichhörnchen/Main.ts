@@ -18,9 +18,10 @@ namespace L11_1_GoldenerHerbst {
         let horizon: number = crc2.canvas.height * golden;
 
         drawBackground();
-        drawSun(new Vector(780, 250));
+        drawSun(new Vector(80, 250));
         drawMountains(new Vector(0, horizon), 75, 250, "grey", "white");
         drawMountains(new Vector(0, horizon), 50, 150, "grey", "lightgrey");
+        drawfog(new Vector(180, 250));
         drawTrees(new Vector(300, 50), "red");
         drawTrees(new Vector(500, 100), "green");
         drawTrees(new Vector(700, 50), "darkorange");
@@ -29,6 +30,7 @@ namespace L11_1_GoldenerHerbst {
         drawBushes(new Vector(20, 130));
         drawBushes(new Vector(400, 100));
         drawBushes(new Vector(600, 140));
+        
 
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
         createClouds();
@@ -38,11 +40,11 @@ namespace L11_1_GoldenerHerbst {
     }
 
     function drawBackground(): void {
-        let golden: number = 0.62;
+        let golden: number = 0.60;
         let gradient: CanvasGradient = crc2.createLinearGradient(0, 0, 0, crc2.canvas.height);
-        gradient.addColorStop(0, "pink");
+        gradient.addColorStop(0, "lightblue");
         gradient.addColorStop(golden, "orange");
-        gradient.addColorStop(1, "darkgreen");
+        gradient.addColorStop(1, "green");
 
         crc2.fillStyle = gradient;
         crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
@@ -50,7 +52,7 @@ namespace L11_1_GoldenerHerbst {
 
     function drawSun(_position: Vector): void {
         let r1: number = 30;
-        let r2: number = 150;
+        let r2: number = 120;
         let gradient: CanvasGradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
 
         gradient.addColorStop(0, "HSLA(60, 100%, 90%, 1)");
@@ -169,5 +171,21 @@ namespace L11_1_GoldenerHerbst {
             moveable.move(1 / 50);
             moveable.draw();
         }
+    }
+
+    function drawfog(_position: Vector): void {
+        let r1: number = 30;
+        let r2: number = 720;
+        let gradient: CanvasGradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
+
+        gradient.addColorStop(0, "hsla(0, 0%, 90%, 0.4)");
+        gradient.addColorStop(1, "hsla(0, 0%, 90%, 0.3)");
+
+        crc2.save();
+        crc2.translate(_position.x, _position.y);
+        crc2.fillStyle = gradient;
+        crc2.arc(0, 0, r2, 0, 2 * Math.PI);
+        crc2.fill();
+        crc2.restore();
     }
 }
