@@ -27,6 +27,7 @@ var L11_2_GoldenerHerbst3;
         createClouds();
         createSquirrel();
         createLeaf();
+        L11_2_GoldenerHerbst3.canvas.addEventListener("click", createNut);
         window.setInterval(update, 60);
     }
     function drawBackground() {

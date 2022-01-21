@@ -36,6 +36,9 @@ namespace L11_2_GoldenerHerbst3 {
         createClouds();
         createSquirrel();
         createLeaf();
+
+        canvas.addEventListener("click", createNut);
+        
         window.setInterval(update, 60);
     }
 
@@ -161,7 +164,6 @@ namespace L11_2_GoldenerHerbst3 {
         moveables.push(nut);
         let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
         nutPos.push(placeNut);
-
     }
 
     function update(): void {

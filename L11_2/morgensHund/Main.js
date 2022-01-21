@@ -27,6 +27,7 @@ var L11_2_GoldenerHerbst4;
         createClouds();
         createSquirrel();
         createLeaf();
+        L11_2_GoldenerHerbst4.canvas.addEventListener("click", createNut);
         window.setInterval(update, 60);
     }
     function drawBackground() {
@@ -113,7 +114,7 @@ var L11_2_GoldenerHerbst4;
     }
     function createSquirrel() {
         for (let i = 0; i < 1; i++) {
-            let squirrel = new Squirrel(0.5, new L11_2_GoldenerHerbst4.Vector(0.5, 500));
+            let squirrel = new L11_2_GoldenerHerbst4.Squirrel(0.5, new L11_2_GoldenerHerbst4.Vector(0.5, 500));
             moveables.push(squirrel);
         }
     }
@@ -126,7 +127,7 @@ var L11_2_GoldenerHerbst4;
     function createNut(_event) {
         console.log(_event);
         // tslint:disable-next-line: typedef
-        let nut = new Nut(new L11_2_GoldenerHerbst4.Vector(_event.offsetX, _event.offsetY));
+        let nut = new L11_2_GoldenerHerbst4.Nut(new L11_2_GoldenerHerbst4.Vector(_event.offsetX, _event.offsetY));
         moveables.push(nut);
         let placeNut = new L11_2_GoldenerHerbst4.Vector(_event.offsetX, _event.offsetY);
         L11_2_GoldenerHerbst4.nutPos.push(placeNut);

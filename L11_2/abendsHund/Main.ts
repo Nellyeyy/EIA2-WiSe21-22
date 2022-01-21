@@ -8,6 +8,8 @@ namespace L11_2_GoldenerHerbst {
     let moveables: Moveable[] = [];
     let imgData: ImageData;
 
+    export let nutPos: Vector[] = [];
+
    
     function handleLoad(_event: Event): void {
 
@@ -33,6 +35,9 @@ namespace L11_2_GoldenerHerbst {
         createClouds();
         createHund();
         createLeaf();
+
+        canvas.addEventListener("click", createNut);
+
         window.setInterval(update, 60);
     }
 
@@ -158,5 +163,14 @@ namespace L11_2_GoldenerHerbst {
             moveable.move(1 / 50);
             moveable.draw();
         }
+    }
+
+    function createNut(_event: MouseEvent): void {
+        console.log(_event);
+        // tslint:disable-next-line: typedef
+        let nut = new Nut(new Vector(_event.offsetX, _event.offsetY));
+        moveables.push(nut);
+        let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
+        nutPos.push(placeNut);
     }
 }

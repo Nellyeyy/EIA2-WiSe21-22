@@ -36,6 +36,9 @@ namespace L11_2_GoldenerHerbst4 {
         createClouds();
         createSquirrel();
         createLeaf();
+        
+        canvas.addEventListener("click", createNut);
+
         window.setInterval(update, 60);
     }
 

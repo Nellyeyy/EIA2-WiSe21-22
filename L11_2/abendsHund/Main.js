@@ -4,6 +4,7 @@ var L11_2_GoldenerHerbst;
     window.addEventListener("load", handleLoad);
     let moveables = [];
     let imgData;
+    L11_2_GoldenerHerbst.nutPos = [];
     function handleLoad(_event) {
         L11_2_GoldenerHerbst.canvas = document.querySelector("canvas");
         L11_2_GoldenerHerbst.crc2 = L11_2_GoldenerHerbst.canvas.getContext("2d");
@@ -25,6 +26,7 @@ var L11_2_GoldenerHerbst;
         createClouds();
         createHund();
         createLeaf();
+        L11_2_GoldenerHerbst.canvas.addEventListener("click", createNut);
         window.setInterval(update, 60);
     }
     function drawBackground() {
@@ -128,6 +130,14 @@ var L11_2_GoldenerHerbst;
             moveable.move(1 / 50);
             moveable.draw();
         }
+    }
+    function createNut(_event) {
+        console.log(_event);
+        // tslint:disable-next-line: typedef
+        let nut = new L11_2_GoldenerHerbst.Nut(new L11_2_GoldenerHerbst.Vector(_event.offsetX, _event.offsetY));
+        moveables.push(nut);
+        let placeNut = new L11_2_GoldenerHerbst.Vector(_event.offsetX, _event.offsetY);
+        L11_2_GoldenerHerbst.nutPos.push(placeNut);
     }
 })(L11_2_GoldenerHerbst || (L11_2_GoldenerHerbst = {}));
 //# sourceMappingURL=Main.js.map

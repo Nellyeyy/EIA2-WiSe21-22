@@ -34,6 +34,9 @@ namespace L11_2_GoldenerHerbst1 {
         createClouds();
         createSquirrel();
         createLeaf();
+
+        canvas.addEventListener("click", createNut);
+
         window.setInterval(update, 60);
     }
 
@@ -152,8 +155,6 @@ namespace L11_2_GoldenerHerbst1 {
         }
     }
 
-
-
     function update(): void {
         crc2.clearRect(0, 0, crc2.canvas.width, crc2.canvas.height);
         crc2.putImageData(imgData, 0, 0);
@@ -162,6 +163,7 @@ namespace L11_2_GoldenerHerbst1 {
             moveable.draw();
         }
     }
+
     function createNut(_event: MouseEvent): void {
         console.log(_event);
         // tslint:disable-next-line: typedef
@@ -169,6 +171,5 @@ namespace L11_2_GoldenerHerbst1 {
         moveables.push(nut);
         let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
         nutPos.push(placeNut);
-
     }
 }
