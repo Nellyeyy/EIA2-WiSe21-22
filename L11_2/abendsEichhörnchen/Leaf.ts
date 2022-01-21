@@ -1,4 +1,4 @@
-namespace L11_1_GoldenerHerbst {
+namespace L11_2_GoldenerHerbst1 {
 
     export class Leaf extends Moveable {
 
@@ -40,7 +40,6 @@ namespace L11_1_GoldenerHerbst {
                 crc2.restore();
             }
             crc2.restore();
-            crc2.closePath();
         }
     }
 }

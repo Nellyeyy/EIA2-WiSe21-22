@@ -1,4 +1,4 @@
-namespace L11_1_GoldenerHerbst {
+namespace L11_2_GoldenerHerbst1 {
     export class Vector {
         public x: number;
         public y: number;

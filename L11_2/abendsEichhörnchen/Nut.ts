@@ -1,8 +1,7 @@
-namespace L11_1_GoldenerHerbst {
-
+namespace L11_2_GoldenerHerbst1 {
     export class Nut extends Moveable {
         
-        public nut: boolean;
+        public wasEaten: boolean;
 
         constructor(_position: Vector) {
             super(_position);  

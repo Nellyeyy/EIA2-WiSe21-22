@@ -1,4 +1,4 @@
-namespace L11_1_GoldenerHerbst {
+namespace L11_2_GoldenerHerbst1 {
 
     window.addEventListener("load", handleLoad);
 
@@ -101,7 +101,7 @@ namespace L11_1_GoldenerHerbst {
         crc2.beginPath();
         crc2.fillStyle = "brown";
         crc2.fillRect(_position.x + -300, _position.y + 400, 25, 110);
-      
+
         crc2.beginPath();
         crc2.fillStyle = _color;
         crc2.arc(_position.x - 310, _position.y + 360, 50, 0, 2 * Math.PI);
@@ -152,15 +152,7 @@ namespace L11_1_GoldenerHerbst {
         }
     }
 
-    function createNut(_event: MouseEvent): void {
-        console.log(_event);
-        // tslint:disable-next-line: typedef
-        let nut = new Nut(new Vector(_event.offsetX, _event.offsetY));
-        moveables.push(nut);
-        let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
-        nutPos.push(placeNut);
 
-    }
 
     function update(): void {
         crc2.clearRect(0, 0, crc2.canvas.width, crc2.canvas.height);
@@ -169,5 +161,14 @@ namespace L11_1_GoldenerHerbst {
             moveable.move(1 / 50);
             moveable.draw();
         }
+    }
+    function createNut(_event: MouseEvent): void {
+        console.log(_event);
+        // tslint:disable-next-line: typedef
+        let nut = new Nut(new Vector(_event.offsetX, _event.offsetY));
+        moveables.push(nut);
+        let placeNut: Vector = new Vector(_event.offsetX, _event.offsetY);
+        nutPos.push(placeNut);
+
     }
 }

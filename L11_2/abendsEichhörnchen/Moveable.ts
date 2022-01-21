@@ -1,4 +1,4 @@
-namespace L11_1_GoldenerHerbst {
+namespace L11_2_GoldenerHerbst1 {
 
     export abstract class Moveable {
 
@@ -33,6 +33,6 @@ namespace L11_1_GoldenerHerbst {
                 this.position.y -= crc2.canvas.height;
         }
 
-        abstract draw(): void;
+        public abstract draw(): void;
     }
 }

@@ -1,6 +1,6 @@
 "use strict";
-var L11_1_GoldenerHerbst;
-(function (L11_1_GoldenerHerbst) {
+var L11_2_GoldenerHerbst3;
+(function (L11_2_GoldenerHerbst3) {
     class Vector {
         x;
         y;
@@ -37,6 +37,6 @@ var L11_1_GoldenerHerbst;
             return new Vector(this.x, this.y);
         }
     }
-    L11_1_GoldenerHerbst.Vector = Vector;
-})(L11_1_GoldenerHerbst || (L11_1_GoldenerHerbst = {}));
+    L11_2_GoldenerHerbst3.Vector = Vector;
+})(L11_2_GoldenerHerbst3 || (L11_2_GoldenerHerbst3 = {}));
 //# sourceMappingURL=Vector.js.map
